@@ -9,11 +9,18 @@
 import UIKit
 
 class AddFriendViewController: UIViewController {
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var moodSegment: UISegmentedControl!
+    
+    var friendsTableViewController: FriendsTableViewController!
+    
   
   // MARK: View Controller Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    print(moodSegment.selectedSegmentIndex)
   }
   
   
@@ -21,6 +28,13 @@ class AddFriendViewController: UIViewController {
   
   @IBAction func saveButtonPressed(_ sender: AnyObject) {
     // TODO: save the added friend here
+    
+    let newFriend = Friend(name: nameField.text!, mood: friendsTableViewController.createFriendMood(segmentIndex: moodSegment.selectedSegmentIndex))
+    
+    friendsTableViewController.friends.append(newFriend)
+    
+    friendsTableViewController.tableView.reloadData()
+    
     dismissViewController()
   }
   
