@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class FriendsTableViewController: UITableViewController, UpdateMoodDelegate {
     
     var friends = [
         Friend(name: "Nikolas", mood: .neutral),
@@ -46,8 +46,7 @@ class FriendsTableViewController: UITableViewController {
         let friend = friends[indexPath.row]
         
         cell.currentFriend = friend
-        cell.tableViewController = self
-        
+        cell.delegate = self
         cell.nameLabel.text = friend.name
         
         switch friend.mood {
@@ -67,10 +66,20 @@ class FriendsTableViewController: UITableViewController {
         return cell
     }
     
-    func moodButtonPressedAction(currentFriend: Friend) {
+//    func moodButtonPressedAction(currentFriend: Friend) {
+//        
+//        let currentMood = currentFriend.mood
+//
+//        currentFriend.mood = updateMood(currentMood: currentMood)
+//        
+//        self.tableView.reloadData()
+//        //        moodButton.setTitle(friend.mood.rawValue, for: .normal)
+//    }
+    
+    func updateFriend(currentFriend: Friend) {
         
         let currentMood = currentFriend.mood
-
+        
         currentFriend.mood = changeFriendMood(mood: currentMood)
         
         self.tableView.reloadData()

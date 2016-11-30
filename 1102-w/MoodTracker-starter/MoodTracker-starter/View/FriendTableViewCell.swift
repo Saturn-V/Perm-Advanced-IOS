@@ -11,13 +11,13 @@ import UIKit
 class FriendTableViewCell: UITableViewCell {
     
     var currentFriend: Friend?
-    var tableViewController: FriendsTableViewController?
+    weak var delegate: UpdateMoodDelegate?
   
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var moodDescriptionLabel: UILabel!
     @IBOutlet weak var moodButton: UIButton!
     
     @IBAction func moodButtonPressed(_ sender: UIButton) {
-    tableViewController!.moodButtonPressedAction(currentFriend: currentFriend!)
+        delegate?.updateFriend(currentFriend: currentFriend!)
     }
 }

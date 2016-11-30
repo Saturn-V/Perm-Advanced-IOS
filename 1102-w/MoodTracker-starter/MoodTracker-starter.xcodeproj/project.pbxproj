@@ -16,6 +16,7 @@
 		55CCD24E1DCA41EC0087F0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD24C1DCA41EC0087F0C1 /* LaunchScreen.storyboard */; };
 		55CCD2561DCA427D0087F0C1 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */; };
 		55CCD25B1DCA42C10087F0C1 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD25A1DCA42C10087F0C1 /* FriendTableViewCell.swift */; };
+		B4091E511DDA527A00EC623A /* UpdateMoodDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4091E501DDA527A00EC623A /* UpdateMoodDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		55CCD24F1DCA41EC0087F0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewController.swift; path = "View Controllers/FriendsTableViewController.swift"; sourceTree = "<group>"; };
 		55CCD25A1DCA42C10087F0C1 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = View/FriendTableViewCell.swift; sourceTree = "<group>"; };
+		B4091E501DDA527A00EC623A /* UpdateMoodDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateMoodDelegate.swift; path = Delegates/UpdateMoodDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		55CCD2421DCA41EC0087F0C1 /* MoodTracker-starter */ = {
 			isa = PBXGroup;
 			children = (
+				B4091E521DDA528800EC623A /* Delegate */,
 				55CCD2591DCA42970087F0C1 /* Model */,
 				55CCD2581DCA42900087F0C1 /* View */,
 				55CCD2571DCA42850087F0C1 /* View Controllers */,
@@ -98,6 +101,14 @@
 				55ABB74C1DCD02E200FB4380 /* Friend.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B4091E521DDA528800EC623A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B4091E501DDA527A00EC623A /* UpdateMoodDelegate.swift */,
+			);
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			files = (
 				55C52FA11DD3816900688CC7 /* AddFriendViewController.swift in Sources */,
 				55ABB74B1DCD02CC00FB4380 /* Mood.swift in Sources */,
+				B4091E511DDA527A00EC623A /* UpdateMoodDelegate.swift in Sources */,
 				55CCD25B1DCA42C10087F0C1 /* FriendTableViewCell.swift in Sources */,
 				55ABB74D1DCD02E200FB4380 /* Friend.swift in Sources */,
 				55CCD2561DCA427D0087F0C1 /* FriendsTableViewController.swift in Sources */,
